@@ -43,3 +43,45 @@ git push
 ls -lrt 
 ssh-keygen -t rsa
 exec ssh-agent bash
+ssh-add
+ls -lrt
+mkdir -p csassignment.git
+cd csassignment.git
+git init --bare
+git add ../bt1.c
+ls -lrt
+cd ..
+ls -lrt
+git add .
+ls -lrt 
+git commit -m "1st try" -a
+git push origin master
+git remote add origin 
+git remote add origin vtz3f@delmar.umsl.edu:csassignment.git
+git push origin master
+git log
+git log --name
+git --name-status
+git log  --name-status
+which emacs
+ls -lrt 
+vi prog1.c
+gcc prog1.c -o prog1
+./prog1
+gcc
+gcc --help
+file prog1
+test
+./prog1
+./prog1 abc
+./prog1 abc 123
+cat prog1.c
+./prog1 abc 123
+./prog1 abc
+./prog1 1
+meld
+diff
+vi prog2.c
+gcc prog2.c -o prog2
+./prog2
+ls -lrt
