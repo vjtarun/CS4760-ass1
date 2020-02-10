@@ -34,10 +34,9 @@ int main(int argc, char *argv[])
 				printf("NAME:\n");
 				printf("	%s - traverse a specified directory in breadth-first order.\n", argv[0]);
 				printf("\nUSAGE:\n");
-				printf("	%s dt [-h] [-I n] [-L -d -g -i -p -s -t -u | -l] [dirname].\n", argv[0]);
+				printf("	%s bt [-h] [-L -d -g -i -p -s -t -u | -l] [dirname].\n", argv[0]);
 				printf("\nDESCRIPTION:\n");
 				printf("	-h	: Print a help message and exit.\n");
-				printf("	-I n	: Change indentation to n spaces for each level.\n");
 				printf("	-L	: Follow symbolic links, if any. Default will be to not follow symbolic links.\n");
 				printf("	-d	: Show the time of last modification.\n");
 				printf("	-g	: Print the GID associated with the file.\n");
@@ -90,7 +89,9 @@ int main(int argc, char *argv[])
 				break;
 
 			default:
-				fprintf(stderr, "%s: Please use \"-h\" option for more info.\n", argv[0]);
+			        perror ("The following error occurred");
+                                printf( "Value of errno: %d\n", errno );
+                           	fprintf(stderr, "%s: Please use \"-h\" option for more info.\n", argv[0]);
 				return EXIT_FAILURE;
 		}
        }
